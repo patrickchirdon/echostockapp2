@@ -1,0 +1,46 @@
+[
+  {
+    datetime: 1663303030000,
+    headline: 'Tesla (TSLA) and Li-Cycle (LICY): Battery Makers Leverage IRA Benefits',
+    source: 'TipRanks',
+    url: 'https://cloud.iexapis.com/v1/news/article/2g4DhLDnCKEbKF39xyKHeH6tb1Bon77i37f1akCTpISG',
+    summary: 'The Inflation Reduction Act (IRA) offers production tax credits to U.S. battery manufacturers that produce batteries with locally sourced materials. Electric vehicle (EV) maker Tesla (NASDAQ:TSLA) and battery recycling company Li-Cycle Holdings Corp. (NYSE:LICY) are two such companies primed to benefit from the IRA. Battery Makers and Battery Recycling Take Center Stage The ongoing supply chain issues and scarcity of raw materials, combined with rising costs for battery sourcing, have forced EV manufacturers to slow down their manufacturing operations. Thus, EV manufacturers are setting up their own battery-making facilities to cut down on costs. Similarly, owing to the scarcity of materials, businesses are turning to battery recycling as an alternative.',
+    related: 'TSLA,TL0-GD,TL0-GS,TL0-GH,TL0-GM,TL0-GF,TL0-GB,TL0-GY,TL0-GI,LICY',
+    image: 'https://cloud.iexapis.com/v1/news/image/2g4DhLDnCKEbKF39xyKHeH6tb1Bon77i37f1akCTpISG',
+    lang: 'en',
+    hasPaywall: false
+  },
+  {
+    datetime: 1663302009000,
+    headline: 'Elon Musk accuses Twitter of fraud, wants ex-employee to testify in legal battle',
+    source: 'Hindustan Times',
+    url: 'https://cloud.iexapis.com/v1/news/article/2U9vDuNc8DPKVyizRJsXwtfIvKry9j7FzNWMat5Nn4Eg',
+    summary: 'Last week, the Tesla CEO slammed Twitter for its decision to pay millions of dollars to a whistleblower it had fired earlier this year.',
+    related: 'TWTR,TSLA,TL0-GD,TL0-GS,TL0-GH,TL0-GM,TL0-GF,TL0-GB,TL0-GY,TL0-GI',
+    image: 'https://cloud.iexapis.com/v1/news/image/2U9vDuNc8DPKVyizRJsXwtfIvKry9j7FzNWMat5Nn4Eg',
+    lang: 'en',
+    hasPaywall: false
+  },
+  {
+    datetime: 1663297045000,
+    headline: "Apple is now the market''s most-shorted stock. If Tesla is an example, that''s bullish. - BitcoinEthereumNews.com",
+    source: 'Bitcoin Ethereum News',
+    url: 'https://cloud.iexapis.com/v1/news/article/2TKRCfgyIBhPPGG6caUae1DkwJ36H0IH6XGySZsa6EKK',
+    summary: 'Apple shareholders need not worry that it’s the most-shorted U.S. stock. I’m referring to the report from short-seller analytics firm S3 Partners that,',
+    related: 'AAPL,TSLA,TL0-GD,TL0-GS,TL0-GH,TL0-GM,TL0-GF,TL0-GB,TL0-GY,TL0-GI',
+    image: 'https://cloud.iexapis.com/v1/news/image/2TKRCfgyIBhPPGG6caUae1DkwJ36H0IH6XGySZsa6EKK',
+    lang: 'en',
+    hasPaywall: false
+  },
+  {
+    datetime: 1663290060000,
+    headline: 'Tesla May Change Retail Strategy in China, Moving Showrooms to Suburb',
+    source: 'TMT Post',
+    url: 'https://cloud.iexapis.com/v1/news/article/1X3NMRUfyeZMIYAVqdXRiRKk4uKjbT8uFQI11C98ayfC',
+    summary: "The retail strategy change doesn''t mean Tesla is holding back in its second largest market next to the United States. It is said that Tesla is increasing hiring to improve services in China.",
+    related: 'TSLA,TL0-GD,TL0-GS,TL0-GH,TL0-GM,TL0-GF,TL0-GB,TL0-GY,TL0-GI',
+    image: 'https://cloud.iexapis.com/v1/news/image/1X3NMRUfyeZMIYAVqdXRiRKk4uKjbT8uFQI11C98ayfC',
+    lang: 'en',
+    hasPaywall: false
+  }
+]
