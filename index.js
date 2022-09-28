@@ -43,7 +43,7 @@ function call_api(finishedAPI, ticker){
     }
     
 	request('https://cloud.iexapis.com/stable/stock/' + ticker + '/quote?token=pk_2711a2706e924888a2a063e6e4cf4307', {json: true}, (err, res,body)=> {
-	if(err){ return console.log(err);}
+	if(err){ return return res.status(404).json("user not found") }
 	if(res.statusCode ===200){
 	    
     const myLogger = new Console({
@@ -66,7 +66,7 @@ function call_api(finishedAPI, ticker){
 	
 	//advanced stats
 	request('https://cloud.iexapis.com/stable/stock/' + ticker + '/stats?token=pk_2711a2706e924888a2a063e6e4cf4307', {json: true}, (err, res,body)=> {
-	if(err){ return console.log(err);}
+	if(err){ return res.status(404).json("user not found")}
 	if(res.statusCode ===200){
 	     
     const myLogger = new Console({
@@ -85,7 +85,7 @@ function call_api(finishedAPI, ticker){
     
 	//company info
 	request('https://cloud.iexapis.com/stable/stock/' + ticker + '/company?token=pk_2711a2706e924888a2a063e6e4cf4307', {json: true}, (err, res,body)=> {
-	if(err){ return console.log(err);}
+	if(err){ return res.status(404).json("user not found")}
 	if(res.statusCode ===200){
 	     
     const myLogger = new Console({
@@ -104,7 +104,7 @@ function call_api(finishedAPI, ticker){
     
 	//company news
 	request('https://cloud.iexapis.com/stable/stock/' + ticker + '/news/last/4?token=pk_2711a2706e924888a2a063e6e4cf4307', {json: true}, (err, res,body)=> {
-	if(err){ return console.log(err);}
+	if(err){ return res.status(404).json("user not found")}
 	if(res.statusCode ===200){
 	     
         const myLogger = new Console({
