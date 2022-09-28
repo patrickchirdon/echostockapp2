@@ -44,6 +44,11 @@ function call_api(finishedAPI, ticker){
     
 	request('https://cloud.iexapis.com/stable/stock/' + ticker + '/quote?token=pk_2711a2706e924888a2a063e6e4cf4307', {json: true}, (err, res,body)=> {
 	if(err){ return res.status(404).json("user not found") }
+	if (!req.body.name) {
+    		return res.status(400).json({
+      		status: 'error',
+      		error: 'req body cannot be empty',
+    });	
 	if(res.statusCode ===200){
 	    
     const myLogger = new Console({
@@ -67,6 +72,11 @@ function call_api(finishedAPI, ticker){
 	//advanced stats
 	request('https://cloud.iexapis.com/stable/stock/' + ticker + '/stats?token=pk_2711a2706e924888a2a063e6e4cf4307', {json: true}, (err, res,body)=> {
 	if(err){ return res.status(404).json("user not found")}
+	if (!req.body.name) {
+    		return res.status(400).json({
+      		status: 'error',
+      		error: 'req body cannot be empty',
+    });	
 	if(res.statusCode ===200){
 	     
     const myLogger = new Console({
