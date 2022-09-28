@@ -43,7 +43,7 @@ function call_api(finishedAPI, ticker){
     }
     
 	request('https://cloud.iexapis.com/stable/stock/' + ticker + '/quote?token=pk_2711a2706e924888a2a063e6e4cf4307', {json: true}, (err, res,body)=> {
-	if(err){ return return res.status(404).json("user not found") }
+	if(err){ return res.status(404).json("user not found") }
 	if(res.statusCode ===200){
 	    
     const myLogger = new Console({
