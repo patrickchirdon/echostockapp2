@@ -86,7 +86,7 @@ function call_api(finishedAPI, ticker){
 	    myLogger.log(JSON.stringify(body))
 	    
 		}
-	});
+	};
 	
 	if (tickervar===0){
     ticker='TSLA'
