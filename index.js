@@ -117,10 +117,11 @@ function call_api(finishedAPI, ticker){
         });
 	    myLogger.log(body)
 	    finishedAPI(body);
+		
+	    return console.log('err8');
 	    
 		}
 		
-		return console.log('err8');
 	});
 	
   
