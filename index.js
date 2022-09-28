@@ -114,7 +114,7 @@ function call_api(finishedAPI, ticker){
         const myLogger = new Console({
         stdout: fs.createWriteStream("views/news.json"),
         stderr: fs.createWriteStream("errStdErr.txt"),
-	return true	
+	return 	
         });
 	    myLogger.log(body)
 	    finishedAPI(body);
