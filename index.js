@@ -42,7 +42,7 @@ function call_api(finishedAPI, ticker){
     }
     
 	request('https://cloud.iexapis.com/stable/stock/' + ticker + '/quote?token=pk_2711a2706e924888a2a063e6e4cf4307', {json: true}, (err, res,body)=> {
-	if(err){ return console.log('err');}
+	if(err){ return console.log('err1');}
 	if(res.statusCode ===200){
 	   
     const myLogger = new Console({
@@ -54,7 +54,7 @@ function call_api(finishedAPI, ticker){
         
         
 		finishedAPI(body);
-		return console.log('err');
+		return console.log('err2');
 		}
 	});
 	
@@ -66,7 +66,7 @@ function call_api(finishedAPI, ticker){
 	
 	//advanced stats
 	request('https://cloud.iexapis.com/stable/stock/' + ticker + '/stats?token=pk_2711a2706e924888a2a063e6e4cf4307', {json: true}, (err, res,body)=> {
-	if(err){ return console.log('err');}
+	if(err){ return console.log('errthree');}
 	if(res.statusCode ===200){
 	     
     const myLogger = new Console({
@@ -75,7 +75,7 @@ function call_api(finishedAPI, ticker){
     });
 	    myLogger.log(JSON.stringify(body))
 		
-	    return console.log('err');
+	    return console.log('err4');
 	    
 		}
 	});
@@ -87,7 +87,7 @@ function call_api(finishedAPI, ticker){
     
 	//company info
 	request('https://cloud.iexapis.com/stable/stock/' + ticker + '/company?token=pk_2711a2706e924888a2a063e6e4cf4307', {json: true}, (err, res,body)=> {
-	if(err){ return console.log('err');}
+	if(err){ return console.log('err5');}
 	if(res.statusCode ===200){
 	     
     const myLogger = new Console({
@@ -98,7 +98,7 @@ function call_api(finishedAPI, ticker){
 	    
 		}
 		
-		return console.log('err');
+		return console.log('err6');
 	});
 	
 	if (tickervar===0){
@@ -108,7 +108,7 @@ function call_api(finishedAPI, ticker){
     
 	//company news
 	request('https://cloud.iexapis.com/stable/stock/' + ticker + '/news/last/4?token=pk_2711a2706e924888a2a063e6e4cf4307', {json: true}, (err, res,body)=> {
-	if(err){ return console.log('err');}
+	if(err){ return console.log('err7');}
 	if(res.statusCode ===200){
 	     
         const myLogger = new Console({
@@ -120,7 +120,7 @@ function call_api(finishedAPI, ticker){
 	    
 		}
 		
-		return console.log('err');
+		return console.log('err8');
 	});
 	
   
@@ -214,7 +214,7 @@ app.post('/example', (req, res) => {
 
     
     
- return console.log('err');
+ return console.log('err9');
   //...
   res.end()
 })
@@ -237,7 +237,7 @@ app.get('/', function(req, res){
 		
 		
 	});
-	return console.log('err');
+	return console.log('err10');
 
 });
 
@@ -257,7 +257,7 @@ app.post('/', function(req, res){
 		
 		});
 	}, req.body.stock_ticker);
-	return console.log('err');
+	return console.log('err11');
 
 });
 
