@@ -61,7 +61,7 @@ function call_api(finishedAPI, ticker){
         
 		finishedAPI(body);
 		}
-	});
+	};
 	
 	if (tickervar===0){
     ticker='TSLA'
@@ -76,7 +76,7 @@ function call_api(finishedAPI, ticker){
     		return res.status(400).json({
       		status: 'error',
       		error: 'req body cannot be empty',
-    });	
+    };	
 	if(res.statusCode ===200){
 	     
     const myLogger = new Console({
