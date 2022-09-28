@@ -44,7 +44,7 @@ function call_api(finishedAPI, ticker){
 	request('https://cloud.iexapis.com/stable/stock/' + ticker + '/quote?token=pk_2711a2706e924888a2a063e6e4cf4307', {json: true}, (err, res,body)=> {
 	if(err){ return console.log(err);}
 	if(res.statusCode ===200){
-	    
+	   
     const myLogger = new Console({
     stdout: fs.createWriteStream("views/overview.json"),
     stderr: fs.createWriteStream("errStdErr.txt"),
@@ -54,6 +54,7 @@ function call_api(finishedAPI, ticker){
         
         
 		finishedAPI(body);
+		return console.log(err);
 		}
 	});
 	
@@ -73,6 +74,8 @@ function call_api(finishedAPI, ticker){
     stderr: fs.createWriteStream("errStdErr.txt"),
     });
 	    myLogger.log(JSON.stringify(body))
+		
+	    return console.log(err);
 	    
 		}
 	});
@@ -94,6 +97,8 @@ function call_api(finishedAPI, ticker){
 	myLogger.log(JSON.stringify(body))
 	    
 		}
+		
+		return console.log(err);
 	});
 	
 	if (tickervar===0){
@@ -114,6 +119,8 @@ function call_api(finishedAPI, ticker){
 	    finishedAPI(body);
 	    
 		}
+		
+		return console.log(err);
 	});
 	
   
@@ -207,7 +214,7 @@ app.post('/example', (req, res) => {
 
     
     
- 
+ return console.log(err);
   //...
   res.end()
 })
@@ -230,6 +237,7 @@ app.get('/', function(req, res){
 		
 		
 	});
+	return console.log(err);
 
 });
 
@@ -249,6 +257,7 @@ app.post('/', function(req, res){
 		
 		});
 	}, req.body.stock_ticker);
+	return console.log(err);
 
 });
 
