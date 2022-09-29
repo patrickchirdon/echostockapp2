@@ -75,7 +75,6 @@ function call_api(finishedAPI, ticker){
     });
 	    myLogger.log(JSON.stringify(body))
 		
-	    return console.log('err4');
 	    
 		}
 	});
