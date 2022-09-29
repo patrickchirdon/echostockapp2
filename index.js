@@ -79,9 +79,7 @@ function call_api(finishedAPI, ticker){
 		
 		}
 	});
-	if(err2){
-			return console.log('err2')
-		}
+	
 	if (tickervar===0){
     ticker='TSLA'
     tickervar=1
