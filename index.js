@@ -98,7 +98,7 @@ function call_api(finishedAPI, ticker){
 	    
 		}
 		
-		return console.log('err6');
+		
 	});
 	
 	if (tickervar===0){
@@ -114,7 +114,7 @@ function call_api(finishedAPI, ticker){
         const myLogger = new Console({
         stdout: fs.createWriteStream("views/news.json"),
         stderr: fs.createWriteStream("errStdErr.txt"),
-	return console.log('hello')
+	
     });	
 	
         });
