@@ -117,7 +117,7 @@ function call_api(finishedAPI, ticker){
 	
     });	
 	
-        });
+      
 	    myLogger.log(body)
 	    finishedAPI(body);
 		
