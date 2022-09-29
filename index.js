@@ -240,7 +240,7 @@ app.get('/', function(req, res){
 		
 		
 	});
-	return console.log('err10');
+	
 
 });
 
