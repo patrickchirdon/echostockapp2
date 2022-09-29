@@ -234,7 +234,7 @@ app.get('/', function(req6, res6){
             
 			res6.render('home', {
 			stock: doneAPI
-			
+			return 
 			
 			
 		
