@@ -54,7 +54,7 @@ function call_api(finishedAPI, ticker){
         
         
 		finishedAPI(body);
-		return console.log('err2');
+		
 		}
 	});
 	
