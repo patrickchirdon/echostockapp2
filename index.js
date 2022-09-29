@@ -65,8 +65,8 @@ function call_api(finishedAPI, ticker){
     
 	
 	//advanced stats
-	request('https://cloud.iexapis.com/stable/stock/' + ticker + '/stats?token=pk_2711a2706e924888a2a063e6e4cf4307', {json: true}, (err, res2,body)=> {
-	if(err){ return console.log('errthree');}
+	request('https://cloud.iexapis.com/stable/stock/' + ticker + '/stats?token=pk_2711a2706e924888a2a063e6e4cf4307', {json: true}, (err2, res2,body)=> {
+	if(err2){ return console.log('errthree');}
 	if(res2.statusCode ===200){
 	     
     const myLogger = new Console({
@@ -79,7 +79,7 @@ function call_api(finishedAPI, ticker){
 		
 		}
 	});
-	if(err){
+	if(err2){
 			return console.log('err2')
 		}
 	if (tickervar===0){
@@ -88,8 +88,8 @@ function call_api(finishedAPI, ticker){
     }
     
 	//company info
-	request('https://cloud.iexapis.com/stable/stock/' + ticker + '/company?token=pk_2711a2706e924888a2a063e6e4cf4307', {json: true}, (err, res3,body)=> {
-	if(err){ return console.log('err5');}
+	request('https://cloud.iexapis.com/stable/stock/' + ticker + '/company?token=pk_2711a2706e924888a2a063e6e4cf4307', {json: true}, (err3, res3,body)=> {
+	if(err3){ return console.log('err5');}
 	if(res3.statusCode ===200){
 	
     const myLogger = new Console({
@@ -110,8 +110,8 @@ function call_api(finishedAPI, ticker){
     }
     
 	//company news
-	request('https://cloud.iexapis.com/stable/stock/' + ticker + '/news/last/4?token=pk_2711a2706e924888a2a063e6e4cf4307', {json: true}, (err, res4,body)=> {
-	if(err){ return console.log('err7');}
+	request('https://cloud.iexapis.com/stable/stock/' + ticker + '/news/last/4?token=pk_2711a2706e924888a2a063e6e4cf4307', {json: true}, (err4, res4,body)=> {
+	if(err4){ return console.log('err7');}
 	if(res4.statusCode ===200){
 	
         const myLogger = new Console({
