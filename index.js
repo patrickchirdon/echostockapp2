@@ -235,7 +235,7 @@ app.get('/', function(req, res){
 			res.render('home', {
 			stock: doneAPI
 			
-			res.end()
+			
 			
 		
 		});
