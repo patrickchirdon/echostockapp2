@@ -77,9 +77,7 @@ function call_api(finishedAPI, ticker){
     });
 	    myLogger.log(JSON.stringify(body))
 		
-	    if(err){
-			return console.log('errt')
-		}
+	
 		
 		}
 	});
@@ -117,9 +115,7 @@ function call_api(finishedAPI, ticker){
 	request('https://cloud.iexapis.com/stable/stock/' + ticker + '/news/last/4?token=pk_2711a2706e924888a2a063e6e4cf4307', {json: true}, (err, res,body)=> {
 	if(err){ return console.log('err7');}
 	if(res.statusCode ===200){
-	if(err){
-			return console.log('errt5')
-		}     
+	
         const myLogger = new Console({
         stdout: fs.createWriteStream("views/news.json"),
         stderr: fs.createWriteStream("errStdErr.txt"),
