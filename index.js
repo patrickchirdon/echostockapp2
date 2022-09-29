@@ -65,9 +65,9 @@ function call_api(finishedAPI, ticker){
     
 	
 	//advanced stats
-	request('https://cloud.iexapis.com/stable/stock/' + ticker + '/stats?token=pk_2711a2706e924888a2a063e6e4cf4307', {json: true}, (err, res,body)=> {
+	request('https://cloud.iexapis.com/stable/stock/' + ticker + '/stats?token=pk_2711a2706e924888a2a063e6e4cf4307', {json: true}, (err, res2,body)=> {
 	if(err){ return console.log('errthree');}
-	if(res.statusCode ===200){
+	if(res2.statusCode ===200){
 	     
     const myLogger = new Console({
     stdout: fs.createWriteStream("views/stats.json"),
@@ -79,16 +79,18 @@ function call_api(finishedAPI, ticker){
 		
 		}
 	});
-	
+	if(err){
+			return console.log('err2')
+		}
 	if (tickervar===0){
     ticker='TSLA'
     tickervar=1
     }
     
 	//company info
-	request('https://cloud.iexapis.com/stable/stock/' + ticker + '/company?token=pk_2711a2706e924888a2a063e6e4cf4307', {json: true}, (err, res,body)=> {
+	request('https://cloud.iexapis.com/stable/stock/' + ticker + '/company?token=pk_2711a2706e924888a2a063e6e4cf4307', {json: true}, (err, res3,body)=> {
 	if(err){ return console.log('err5');}
-	if(res.statusCode ===200){
+	if(res3.statusCode ===200){
 	
     const myLogger = new Console({
     stdout: fs.createWriteStream("views/info.json"),
@@ -108,9 +110,9 @@ function call_api(finishedAPI, ticker){
     }
     
 	//company news
-	request('https://cloud.iexapis.com/stable/stock/' + ticker + '/news/last/4?token=pk_2711a2706e924888a2a063e6e4cf4307', {json: true}, (err, res,body)=> {
+	request('https://cloud.iexapis.com/stable/stock/' + ticker + '/news/last/4?token=pk_2711a2706e924888a2a063e6e4cf4307', {json: true}, (err, res4,body)=> {
 	if(err){ return console.log('err7');}
-	if(res.statusCode ===200){
+	if(res4.statusCode ===200){
 	
         const myLogger = new Console({
         stdout: fs.createWriteStream("views/news.json"),
@@ -147,9 +149,9 @@ app.set('view engine', 'handlebars');
 
 
 
-app.post('/example', (req, res) => {
-  const phonenumber = req.body.phonenumber
-  const nm = req.body.nm
+app.post('/example', (req5, res5) => {
+  const phonenumber = req5.body.phonenumber
+  const nm = req5.body.nm
   const fs = require('fs');
 
   let rawdata = fs.readFileSync('overview.json');
@@ -169,7 +171,7 @@ app.post('/example', (req, res) => {
   let stats= JSON.parse(rawdata3);
   let stats2= JSON.stringify(stats, null, 2);
   
-  console.log(req.body)
+  console.log(req4.body)
   
   
   
@@ -221,18 +223,18 @@ app.post('/example', (req, res) => {
     
  return console.log('err9');
   //...
-  res.end()
+  res4.end()
 })
 
 
 
 //Set index handlebar index  GET routes
-app.get('/', function(req, res){
+app.get('/', function(req6, res6){
 		call_api(function(doneAPI){
           
             
             
-			res.render('home', {
+			res6.render('home', {
 			stock: doneAPI
 			
 			
@@ -249,11 +251,11 @@ app.get('/', function(req, res){
 
 
 //Set index handlebar index  POST routes
-app.post('/', function(req, res){
+app.post('/', function(req7, res7){
 		call_api(function(doneAPI){
 		    console.log(req.body)
 			posted_stuff =req.body.stock_ticker;
-			res.render('home', {
+			res6.render('home', {
 			stock: doneAPI
 			
 			
@@ -261,7 +263,7 @@ app.post('/', function(req, res){
 				
 		
 		});
-	}, req.body.stock_ticker);
+	}, req7.body.stock_ticker);
 	return console.log('err11');
 
 });
