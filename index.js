@@ -243,9 +243,7 @@ app.get('/', function(req, res){
 			res.render('home', {
 			stock: doneAPI
 			
-			if(err){
-			return console.log('errten')
-		}
+			res.end()
 			
 		
 		});
